@@ -29,14 +29,16 @@ import Auth from './utils/auth';
 // development mode
 Vue.config.productionTip = false;
 // enable plugins
-Vue.use(Element, {locale});
+Vue.use(Element, {
+  locale
+});
 Vue.use(GlobalErrorHandler, {
   router: router,
   store: store
 });
 
 router.beforeEach(async (to, from, next) => {
-  if (from.path !== to.path){
+  if (from.path !== to.path) {
     NProgress.start();
   }
   if (to.matched.some(record => record.meta.needLogin)) {
@@ -44,20 +46,17 @@ router.beforeEach(async (to, from, next) => {
       // 需要管理员
       if (await Auth.isAdmin()) {
         next();
-      }
-      else {
+      } else {
         NProgress.done();
         next({
           name: 'Index'
         })
       }
-    }
-    else {
+    } else {
       // 需要登录的操作。
       if (Auth.isLogin()) {
         next();
-      }
-      else {
+      } else {
         store.commit("logout");
         NProgress.done();
         next({
@@ -68,8 +67,7 @@ router.beforeEach(async (to, from, next) => {
         })
       }
     }
-  }
-  else {
+  } else {
     next();
   }
 });
@@ -85,21 +83,7 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: {App}
+  components: {
+    App
+  }
 });
-
-console.log(`
-
-  _    _  _____ _______ ______   ___   ___  __ ______
- | |  | |/ ____|__   __|  ____| |__ \\ / _ \\/_ |____  |
- | |__| | |       | |  | |__       ) | | | || |   / /
- |  __  | |       | |  |  __|     / /| | | || |  / /
- | |  | | |____   | |  | |       / /_| |_| || | / /
- |_|  |_|\\_____|  |_|  |_|      |____|\\___/ |_|/_/
-
-
-
-      `);
-console.log(`
-        Vidar Team © 2017
-      `);

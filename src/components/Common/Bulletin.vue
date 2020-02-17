@@ -1,60 +1,49 @@
 <template>
   <div>
-    <h2>{{ $t("bulletin.title") }} </h2>
+    <h2>{{ $t("bulletin.title") }}</h2>
     <el-collapse value="rule">
       <el-collapse-item name="rule">
-        <template slot="title">
-          Rules
-        </template>
+        <template slot="title">Welcome to cug CTF !</template>
         <article>
           <ul>
-            <li>Qualification is online jeopardy for 48 hours.</li>
-            <li>Top 10 Chinese teams will be invited to HCTF Final.</li>
-            <li>After the HCTF Final, we will invite two team from Zhejiang to take part in an extra-competition.</li>
-            <li>Dynamic Score System is applied to all the challenges. All the challenges have an initial score of 1,000 and will be adjusted automatically according to the number of teams who solved the challenge.</li>
-            <li>Each team has 30 chances to submit flag for each challenge.</li>
+            <li>CTF是什么?</li>
             <li>
-              Flag format: hctf{xxxxxxx}
+              CTF 夺旗赛，是信息安全技术竞赛的一种形式，也是一种历史悠久的黑客游戏，起源于DEFCON，拥有浓厚的黑客文化。拿到一个flag（其实就是一串字符），
+              代表你已经攻陷了某一个服务器，破解了某一个软件，破译某种有安全问题的密码算法或协议，也可能是从一组网络流量或者音频视频文件中找到了隐藏的信息。
             </li>
-            <li>
-              During the contest,any of the following behaviors will lead to disqualification:
-              <ol>
-                <li>Any behavior that compromises the fairness of contest</li>
-                <li>Publishing, exchanging problem solutions</li>
-                <li>Attacking any personnel, including participants and non-participants, or the contest system itself</li>
-              </ol>
-            </li>
-            <li>A special rule will be introduced 2 hours before the qualification.</li>
-            <li>The qualification starts at 2017-11-10T12:00:00.000Z and ends at 2017-11-12T12:00:00.000Z. (48hrs)</li>
           </ul>
         </article>
         <article>
           <ul>
-            <li>预赛为48小时的线上 jeopardy 形式</li>
-            <li>前十的中国队伍将邀请参加 HCTF 决赛</li>
-            <li>HCTF 决赛结束后，还会邀请两支浙江的队伍和决赛队伍一起参加加赛</li>
-            <li>题目分数采用动态分数，每题初始分值为 1,000 ，根据题目完成情况，题目的分值会发生变化。</li>
-            <li>对于每道题目，每支队伍仅有30次提交 flag的机会</li>
-            <li>Flag格式: hctf{xxxxxxx}</li>
-            <li>比赛期间，做出以下事项的参赛队伍将会被取消资格:
-              <ol>
-                <li>进行任何破坏比赛公平公正的行为</li>
-                <li>散播或与其他队伍交换flag</li>
-                <li>对平台、参赛者及其他人员进行攻击</li>
-              </ol>
-            </li>
+            CTF的比赛形式？
+            <li>解题模式（ Jeopardy ）</li>
+            <li>战争分享模式 （Belluminar）</li>
+            <li>攻防模式 （Attack–Defense）</li>
+            <li>类型</li>
+            <li>Web漏洞与渗透 (Web)</li>
+            <li>软件逆向 (Reverse Engineering)</li>
+            <li>漏洞挖掘和利用 (Exploit(PWN))</li>
+            <li>密码学原理及应用 (Crypto)</li>
+            <li>信息搜集等杂项 (Misc)</li>
+            <li>快速漏洞挖掘和利用能力</li>
+            <li>攻击和防御的综合能力</li>
+            <li>流量分析和快速学习能力</li>
+            <li>团队分工协作能力</li>
+            <li>其他安全方面的扎实基本功</li>
+            <li>持续作战的能力（常为1.5天）</li>
+          </ul>
+          <ul>
+            关于我们？
             <li>
-              线下赛奖金
-              <ul>
-                <li>一等奖：一万元奖金（一支队伍）</li>
-                <li>二等奖：五千元奖金（两支队伍）</li>
-                <li>三等奖：两千元奖金（三支队伍）</li>
-                <li>优秀团队奖：两百元等值奖品（四支队伍）</li>
-                <li>加赛总奖金为十万元</li>
-              </ul>
+              我们的社团目前主要由Web、Crypt、Pwn、Reverse、Misc五个部门组成，
+              我们的宗旨是：以学生兴趣为导向， 完成从书本知识到实际能力的转化。
+              我们会尽己所能带领大家:
             </li>
-            <li>比赛采用特殊的规则，神秘的规则将在比赛开始前2个小时公布</li>
-            <li>预赛时间为 2017-11-10T12:00:00.000Z 到 2017-11-12T12:00:00.000Z （共48小时）</li>
+            <li>加入校内安全团队, 才有集体荣誉感并坚持下来</li>
+            <li>持续参加比赛和训练, 坚持不懈的努力付出</li>
+            <li>即使不能站到世界顶峰，也足以在同龄人中脱颖而出</li>
+            <li>和科研相结合，安全能力输出形式可以多样化</li>
+            <li>从国内走向国际，迎接挑战才有飞跃进步</li>
           </ul>
         </article>
       </el-collapse-item>
@@ -62,5 +51,5 @@
   </div>
 </template>
 <script>
-  export default {}
+export default {};
 </script>
